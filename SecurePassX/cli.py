@@ -1,8 +1,8 @@
 from typing import Optional, List
 from pathlib import Path
 import typer
-from secpassw0rd import ERRORS, __app_name__, __version__, config, database, secpassw0rd, security
-from secpassw0rd import __app_name__, __version__
+from SecurePassX import ERRORS, SecurePassX, __app_name__, __version__, config, database, security
+from SecurePassX import __app_name__, __version__
 
 app = typer.Typer()
 
@@ -33,7 +33,7 @@ def init(
     else:
         typer.secho(f"The database is {db_path}", fg=typer.colors.GREEN)
 
-def get_secreter() -> secpassw0rd.SecPassSecret:
+def get_secreter() -> SecurePassX.SecPassSecret:
     if config.CONFIG_FILE_PATH.exists():
         db_path = database.get_database_path(config.CONFIG_FILE_PATH)
     else:
@@ -43,7 +43,7 @@ def get_secreter() -> secpassw0rd.SecPassSecret:
         )
         raise typer.Exit(1)
     if db_path.exists():
-        return secpassw0rd.SecPassSecret(db_path)
+        return SecurePassX.SecPassSecret(db_path)
     else:
         typer.secho(
             'Database not found. Please, run "secpass init"',

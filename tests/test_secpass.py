@@ -3,13 +3,13 @@ import json
 import pytest
 from typer.testing import CliRunner
 
-from secpassw0rd import (
+from SecurePassX import (
     DB_READ_ERROR,
     SUCCESS,
+    SecurePassX,
     __app_name__,
     __version__,
     cli,
-    secpassw0rd,
 )
 
 runner = CliRunner()
@@ -66,7 +66,7 @@ test_data2 = {
     ],
 )
 def test_add(mock_json_file, title, username, password, expected):
-    secreter = secpassw0rd.SecPassSecret(mock_json_file)
+    secreter = SecurePassX.SecPassSecret(mock_json_file)
     secreter.add(title, username, password)
     read = secreter._db_handler.read_secert()
     assert len(read.secret_list) == 2

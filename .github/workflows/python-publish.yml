@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: pypi
-      url: https://pypi.org/p/secpassw0rd
+      url: https://pypi.org/p/SecurePassX
     permissions:
       id-token: write
     steps:
