@@ -19,5 +19,5 @@ setup(
     },
     description="A secure password management solution",
     long_description=long_description,
-    long_description_content_type="text/x-rst",
+    long_description_content_type="text/markdown",
 )
