@@ -1,6 +1,6 @@
 import configparser
 from cryptography.fernet import Fernet
-from secpassword import config
+from secpassw0rd import config
 
 def encrypt(password: str) -> str:
     config_file = config.CONFIG_FILE_PATH
