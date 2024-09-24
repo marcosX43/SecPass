@@ -1,4 +1,4 @@
-__app_name__ = "secpass"
+__app_name__ = "secpassword"
 __version__ = "0.1.0"
 
 (
