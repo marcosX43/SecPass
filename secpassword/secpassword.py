@@ -1,9 +1,9 @@
 from typing import Any, Dict, NamedTuple
-from secpass.database import DatabaseHandler
+from secpassword.database import DatabaseHandler
 from pathlib import Path
 from typing import Any, Dict, List, NamedTuple
-from secpass import DB_READ_ERROR, ID_ERROR
-from secpass.security import encrypt
+from secpassword import DB_READ_ERROR, ID_ERROR
+from secpassword.security import encrypt
 
 class Secret(NamedTuple):
     secret: Dict[str, Any]

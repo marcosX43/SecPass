@@ -2,8 +2,8 @@ import configparser
 import json
 from pathlib import Path
 from typing import Any, Dict, List, NamedTuple
-from secpass import DB_WRITE_ERROR, SUCCESS
-from secpass import DB_READ_ERROR, DB_WRITE_ERROR, JSON_ERROR, SUCCESS
+from secpassword import DB_WRITE_ERROR, SUCCESS
+from secpassword import DB_READ_ERROR, DB_WRITE_ERROR, JSON_ERROR, SUCCESS
 
 
 DEFAULT_DB_FILE_PATH = Path.home().joinpath(

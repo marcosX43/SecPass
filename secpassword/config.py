@@ -4,7 +4,7 @@ from cryptography.fernet import Fernet
 
 import typer
 
-from secpass import (
+from secpassword import (
     DB_WRITE_ERROR, DIR_ERROR, FILE_ERROR, SUCCESS, __app_name__
 )
 
